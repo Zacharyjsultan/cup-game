@@ -9,13 +9,13 @@ const buttonThree = document.getElementById('button-three');
 
 const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
-const total = document.getElementById('totals');
+const totalEl = document.getElementById('totals');
 
 // let state
 let wins = 0;
-let losses = 0;
+let total = 0;
 
-function resetImages () {
+function resetImages() {
     firstContainer.src = '/assets/cup-1.jpeg';
     secondContainer.src = '/assets/cup-2.webp';
     thirdContainer.src = '/assets/cup-3.webp';
@@ -30,16 +30,19 @@ function displayWinsLossesAndTotal() {
 
 // set event listeners 
 buttonOne.addEventListener('click'), () => {
-  resetImages();
+    resetImages();
+    total++;
 
 };
-buttonOne.addEventListener('click'), () => {
-  resetImages();
+
+buttonTwo.addEventListener('click'), () => {
+    resetImages();
+    total++;
   
 };
-buttonOne.addEventListener('click'), () => {
-  resetImages();
-  
+buttonThree.addEventListener('click'), () => {
+    resetImages();
+    total++;
 };
   // get user input
   // use user input to update state 
