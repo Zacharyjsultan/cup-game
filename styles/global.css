@@ -22,7 +22,8 @@ header {
 
 main {
     padding: 20px;
-    display: flex;
+    display: grid;
+    grid-template-rows: 4fr 3fr 1fr;
   
 }
 
@@ -38,7 +39,6 @@ footer {
 
 img {
     max-height: 300px;
- 
     flex-direction: row;
     border: 1em;
     max-width: 200px;
@@ -48,4 +48,9 @@ img {
 
 section {
     display: flex;
+}
+
+.mug-guess {
+    display: flex;
+    flex-direction: column;
 }
