@@ -21,10 +21,10 @@ function resetImages() {
     thirdContainer.src = '/assets/cup-3.webp';
 }
 
-function displayWinsLossesAndTotal() {
+function displayTotals() {
     winsEl.textContent = wins;
     lossesEl.textContent = total - wins;
-    total.textContent = total;
+    totalEl.textContent = total;
 
 }
 
@@ -32,17 +32,18 @@ function displayWinsLossesAndTotal() {
 buttonOne.addEventListener('click'), () => {
     resetImages();
     total++;
-
+    const randomMug = Math.floor(Math.random() * 3);
 };
 
 buttonTwo.addEventListener('click'), () => {
     resetImages();
     total++;
-  
+    const randomMug = Math.floor(Math.random() * 3);
 };
 buttonThree.addEventListener('click'), () => {
     resetImages();
     total++;
+    const randomMug = Math.floor(Math.random() * 3);
 };
   // get user input
   // use user input to update state 
