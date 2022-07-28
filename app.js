@@ -33,17 +33,54 @@ buttonOne.addEventListener('click'), () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
+    if (randomCupNumber === 0) {
+        firstContainer.src = './assets/cup-with-ball.jpeg';
+
+    } else if (randomCupNumber === 1) {
+        secondContainer.src = './assets/cup-with-ball.jpeg';
+
+        wins++;
+    } else {
+        thirdContainer.src = './assets/cup-with-ball.jpeg';
+    }
+
+    displayTotals();
 };
 
 buttonTwo.addEventListener('click'), () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
+    if (randomCupNumber === 0) {
+        firstContainer.src = './assets/cup-with-ball.jpeg';
+
+    } else if (randomCupNumber === 1) {
+        secondContainer.src = './assets/cup-with-ball.jpeg';
+
+
+        wins++;
+    } else {
+        thirdContainer.src = './assets/cup-with-ball.jpeg';
+    }
+
+    displayTotals();
 };
 buttonThree.addEventListener('click'), () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
+    if (randomCupNumber === 0) {
+        firstContainer.src = './assets/cup-with-ball.jpeg';
+
+    } else if (randomCupNumber === 1) {
+        secondContainer.src = './assets/cup-with-ball.jpeg';
+
+        wins++;
+    } else {
+        thirdContainer.src = './assets/cup-with-ball.jpeg';
+    }
+
+    displayTotals();
 };
   // get user input
   // use user input to update state 
