@@ -11,14 +11,19 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('totals');
 
+const resetEl = document.getElementById('reset-button');
+
 // let state
 let wins = 0;
 let total = 0;
 
+
+ // use user input to update state 
+
 function resetImages() {
-    firstContainer.src = '/assets/cup-1.jpeg';
-    secondContainer.src = '/assets/cup-2.webp';
-    thirdContainer.src = '/assets/cup-3.webp';
+    firstContainer.src = './assets/cup-1.jpeg';
+    secondContainer.src = './assets/cup-2.webp';
+    thirdContainer.src = './assets/cup-3.webp';
 }
 
 function displayTotals() {
@@ -28,15 +33,15 @@ function displayTotals() {
 
 }
 
-// set event listeners 
-buttonOne.addEventListener('click'), () => {
+// set event listeners  // get user input
+buttonOne.addEventListener('click', () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
-    if (randomCupNumber === 0) {
+    if (randomMug === 0) {
         firstContainer.src = './assets/cup-with-ball.jpeg';
 
-    } else if (randomCupNumber === 1) {
+    } else if (randomMug === 1) {
         secondContainer.src = './assets/cup-with-ball.jpeg';
 
         wins++;
@@ -45,16 +50,16 @@ buttonOne.addEventListener('click'), () => {
     }
 
     displayTotals();
-};
+});
 
-buttonTwo.addEventListener('click'), () => {
+buttonTwo.addEventListener('click', () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
-    if (randomCupNumber === 0) {
+    if (randomMug === 0) {
         firstContainer.src = './assets/cup-with-ball.jpeg';
 
-    } else if (randomCupNumber === 1) {
+    } else if (randomMug === 1) {
         secondContainer.src = './assets/cup-with-ball.jpeg';
 
 
@@ -64,15 +69,15 @@ buttonTwo.addEventListener('click'), () => {
     }
 
     displayTotals();
-};
-buttonThree.addEventListener('click'), () => {
+});
+buttonThree.addEventListener('click', () => {
     resetImages();
     total++;
     const randomMug = Math.floor(Math.random() * 3);
-    if (randomCupNumber === 0) {
+    if (randomMug === 0) {
         firstContainer.src = './assets/cup-with-ball.jpeg';
 
-    } else if (randomCupNumber === 1) {
+    } else if (randomMug === 1) {
         secondContainer.src = './assets/cup-with-ball.jpeg';
 
         wins++;
@@ -81,7 +86,12 @@ buttonThree.addEventListener('click'), () => {
     }
 
     displayTotals();
-};
-  // get user input
-  // use user input to update state 
+});
+
+resetEl.addEventListener('click', () => {
+    resetImages();
+    total = 0;
+    wins = 0;
+    displayTotals ();
+});
   // update DOM to reflect the new state
