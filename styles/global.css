@@ -22,6 +22,9 @@ header {
 
 main {
     padding: 20px;
+    display: grid;
+    grid-template-rows: 4fr 3fr 1fr;
+  
 }
 
 footer {
@@ -33,3 +36,22 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+
+img {
+    max-height: 300px;
+    flex-direction: row;
+    border: 1em;
+    max-width: 200px;
+    border-style: groove;
+    max-height: 50%;
+}
+
+section {
+    display: flex;
+}
+
+.mug-guess {
+    display: flex;
+    flex-direction: column;
+}
+

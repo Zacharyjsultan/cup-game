@@ -18,14 +18,52 @@
 <body>
     <header>
         <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1>PICK-A-MUG</h1>
+
     </header>
 
-    <main>
+ <main>
+        <section class="mugs">
+        
+    <div class="mug-guess">
 
-    </main>
+        <img src="./assets/cup-1.jpeg" alt="mug1" id="mug-one">
 
-    <footer>&copy;2022 Software Developer</footer>
+        <button id="button-one">Mug Guess</button>
+
+    </div>
+   
+    <div class="mug-guess">
+        
+        <img src="./assets/cup-2.webp" alt="mug-2" id="mug-two">
+        
+        <button id="button-two">Mug Guess</button>
+
+    </div>
+
+    <div class="mug-guess">
+
+        <img src="./assets/cup-3.webp" alt="mug-3" id="mug-three">
+
+        <button id="button-three">Mug Guess</button>
+
+    </div>
+    
+         </section>
+
+    <section class="results" id="results-section">
+        <div>Wins: <span id="wins">0</span></div>
+        <div>Losses: <span id="losses">0</span></div>
+        <div>Total: <span id="totals">0</span></div>
+
+    </section>
+    
+    <button id="reset-button">RESET GAME</button>
+    
+</main>
+
+
+    <footer>&copy;3032 Software Developer</footer>
 
     <script type="module" src="app.js"></script>
 </body>
