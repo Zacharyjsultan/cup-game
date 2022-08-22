@@ -11,6 +11,8 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('totals');
 
+const hidingMug = ['cupOne', 'cupTwo', 'cupThree'];
+
 const resetEl = document.getElementById('reset-button');
 
 // let state
@@ -32,6 +34,14 @@ function displayTotals() {
     totalEl.textContent = total;
 
 }
+
+function getRandomItem(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const item = arr[randomIndex];
+    return item;
+}
+
+
 
 // set event listeners  // get user input
 buttonOne.addEventListener('click', () => {
@@ -95,3 +105,4 @@ resetEl.addEventListener('click', () => {
     displayTotals ();
 });
   // update DOM to reflect the new state
+
